@@ -72,6 +72,8 @@ sudo nano /etc/netplan/*.yaml
 Apply changes:
 
 sudo netplan apply
+
+
 Step 4: Install Web Server
 
 Update system:
@@ -89,6 +91,7 @@ sudo systemctl start apache2
 Enable auto start:
 
 sudo systemctl enable apache2
+
 Step 5: Configure Firewall
 
 Allow HTTP traffic:
@@ -102,6 +105,7 @@ sudo ufw enable
 Check status:
 
 sudo ufw status
+
 Step 6: Deploy Test Web Application
 
 Go to web directory:
@@ -116,6 +120,7 @@ Add simple HTML content:
 
 <h1>Web Test Server Working</h1>
 Save and exit
+
 Step 7: Verification & Testing
 Open browser
 Enter server IP address
@@ -124,6 +129,7 @@ Confirm the page displays correctly
 Test SSH connection:
 
 ssh username@server-ip
+
 7. Post-Setup Checklist
  VM is running
  Linux installed successfully
@@ -131,10 +137,12 @@ ssh username@server-ip
  Apache is running
  Web page is accessible
  SSH access works
+
 8. Security Notes
 Use strong passwords
 Disable root login (recommended)
 Keep system updated regularly
+
 9. Revision History
 Version	Date	Description
 1.0	2026-03-26	Initial version

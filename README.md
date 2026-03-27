@@ -28,7 +28,7 @@ The purpose of this document is to provide a standardized, repeatable process fo
 | :--- | :--- | :--- | :--- | :--- |
 | **VM Hardware Setup** | System Admin | IT Manager | Hardware Lead | QA Team |
 | **OS & Network Config** | System Admin | IT Manager | - | Security Team |
-| **Web Service Config** | **System Admin** | **IT Manager** | **Dev Team** | **QA Team** |
+| **Web Service Config** | System Admin | IT Manager | Dev Team | QA Team |
 | **Security (Firewall)** | Network Admin | Security Lead | System Admin | - |
 
 ## 6. Steps
@@ -172,7 +172,11 @@ The purpose of this document is to provide a standardized, repeatable process fo
 * **Security**: Always check **SELinux** settings if the web page fails to load.
 * **Best Practice**: Always run `sudo dnf update` before installing new software.
 
-## 9. Revision History
-| Version | Date | Author | Description |
-| :--- | :--- | :--- | :--- |
-| **1.0** | **2026-03-26** | **Jie Zhuang** | **Initial Release of Document** |
+## 9. Reversion History
+
+| Version | Date       | Author      | Description                          |
+| :------ | :--------- | :---------- | :----------------------------------- |
+| 0.1     | 2026-03-26 | Jie Zhuang  | Initial Draft (Internal Review)      |
+| 0.2     | 2026-03-27 | Jie Zhuang  | Added RACI Matrix and Screenshots    |
+| 1.0     | 2026-03-27 | Jie Zhuang  | Final Version for Assignment Submission |
+

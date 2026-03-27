@@ -1,88 +1,80 @@
 # Standard Operating Procedure: Setup of Virtual Linux Server for Web Application Testing
 
-## 1. Purpose
-This SOP explains how to create and configure a Red Hat Linux virtual server for web application testing. It helps ensure the system is set up correctly and ready for use.
+## 1. Title
+**SOP Name:** Virtual Linux Server Deployment and Web Configuration  
+**Document ID:** MITT-NSA-2026-01  
+**Category:** Systems Administration / Testing Environment  
 
-## 2. Scope
-This document is for students and IT administrators who need to deploy a Red Hat Enterprise Linux (RHEL) virtual machine for testing web applications.
+## 2. Approval Table
+| Role | Name | Date | Signature |
+| :--- | :--- | :--- | :--- |
+| **Author** | Jie Zhuang | 2026-03-26 | ____________ |
+| **Reviewer** | IT Instructor | 2026-03-27 | ____________ |
+| **Approver** | QA Lead | 2026-03-28 | ____________ |
 
-## 3. System Requirements
+## 3. Purpose
+The purpose of this document is to provide a standardized, repeatable process for setting up a Red Hat Enterprise Linux (RHEL) virtual machine. This ensures that web application testing environments are consistent and reduce configuration errors.
 
-**Hardware**
-- CPU: 2 cores
-- RAM: 4 GB
-- Disk: 20 GB
+## 4. Scope/Objectives
+- **Scope:** This procedure covers VM creation, OS installation, network configuration, and web server setup.
+- **Objectives:**
+  - Deploy a functional RHEL 9 server.
+  - Successfully host a test web page.
+  - Ensure remote access via SSH for testing.
 
-**Software**
-- Virtualization: VMware / VirtualBox
-- OS: Red Hat Enterprise Linux 9 (or Rocky Linux / AlmaLinux)
-- ISO file for installation
+## 5. Accountability Matrix (RACI)
+| Task | Responsible | Accountable | Consulted | Informed |
+| :--- | :--- | :--- | :--- | :--- |
+| VM Creation | Admin | IT Manager | Hardware Team | QA Team |
+| OS Install | Admin | IT Manager | - | Dev Team |
+| Firewall Config | Network Admin | Security Lead | Admin | - |
+| Web Testing | QA Tester | QA Lead | Admin | Dev Team |
 
-## 4. Definitions
-
-| Term   | Description           |
-| ------ | --------------------- |
-| VM     | Virtual Machine       |
-| SSH    | Remote login protocol |
-| HTTP   | Web service protocol  |
-| Apache | Web server software   |
-
-
-## 5. Responsibilities
-
-| Task               | Responsible          |
-| ------------------ | -------------------- |
-| VM Setup           | System Administrator |
-| OS Installation    | System Administrator |
-| Network Setup      | Network Admin        |
-| Web Server Install | Developer / Tester   |
-| Testing            | QA Team              |
-
-## 6. Procedure
+## 6. Steps
 
 **Step 1: Create Virtual Machine**
 
-**1.** Open VMware or VirtualBox
+1. Open VMware or VirtualBox
 
-**2.** Click Create New Virtual Machine
+2. Click Create New Virtual Machine
 
-**3.** Set:
+3. Set:
 
-- Name: rhel-web-test
+   - Name: rhel-web-test
 
-- OS Type: Linux (RHEL 9)
+   - OS Type: Linux (RHEL 9)
 
-**4.** Allocate:
+4. Allocate:
 
-- CPU: 2 cores
+   - CPU: 2 cores
 
-- RAM: 4 GB
+   - RAM: 4 GB
 
-**5.** Create disk (20 GB)
+5. Create disk (20 GB)
 
-**6.** Attach RHEL ISO
+6. Attach RHEL ISO
 
 ### Step 2: Install Red Hat Linux
 
-**1.** Start VM and select Install RHEL 9
+1. Start VM and select Install RHEL 9
 
-**2.** Configure:
+2. Configure:
 
-- Language: English
+   - Language: English
   
-- Installation Destination: automatic
+   - Installation Destination: automatic
   
-**3.** Set:
+3. Set:
   
-- Hostname: webtest-rhel
+   - Hostname: webtest-rhel
   
-- Root password
+   - Root password
   
-- Create user account
+   - Create user account
   
-**4.** Enable network during installation
+4. Enable network during installation
   
-**5.** Complete installation and reboot
+5. Complete installation and reboot
 
 ### Step 3: Configure Network
 1. Check IP address:

@@ -23,12 +23,13 @@ The purpose of this document is to provide a standardized, repeatable process fo
   - Ensure remote access via SSH for testing.
 
 ## 5. Accountability Matrix (RACI)
-| Task | Responsible | Accountable | Consulted | Informed |
+
+| Task | Responsible (R) | Accountable (A) | Consulted (C) | Informed (I) |
 | :--- | :--- | :--- | :--- | :--- |
-| VM Creation | Admin | IT Manager | Hardware Team | QA Team |
-| OS Install | Admin | IT Manager | - | Dev Team |
-| Firewall Config | Network Admin | Security Lead | Admin | - |
-| Web Testing | QA Tester | QA Lead | Admin | Dev Team |
+| **VM Hardware Setup** | System Admin | IT Manager | Hardware Lead | QA Team |
+| **OS & Network Config** | System Admin | IT Manager | - | Security Team |
+| **Web Service Config** | **System Admin** | **IT Manager** | **Dev Team** | **QA Team** |
+| **Security (Firewall)** | Network Admin | Security Lead | System Admin | - |
 
 ## 6. Steps
 

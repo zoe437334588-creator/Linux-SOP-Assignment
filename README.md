@@ -172,6 +172,10 @@ The purpose of this document is to provide a standardized, repeatable process fo
 * **Security**: Always check **SELinux** settings if the web page fails to load.
 * **Best Practice**: Always run `sudo dnf update` before installing new software.
 
+
+
+
+
 ## 9. Reversion History
 
 | Version | Date       | Author      | Description                          |
